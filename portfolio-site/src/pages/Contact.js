@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -14,7 +15,32 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Message submitted (no backend connected yet).');
+
+    const templateParams = {
+      first_name: formData.first,
+      last_name: formData.last,
+      email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+    };
+
+    emailjs
+      .send(
+        'YOUR_SERVICE_ID',
+        'YOUR_TEMPLATE_ID',
+        templateParams,
+        'YOUR_PUBLIC_KEY'
+      )
+      .then(
+        (response) => {
+          alert('Message sent successfully!');
+          console.log('SUCCESS!', response.status, response.text);
+        },
+        (err) => {
+          alert('Failed to send message. Please try again.');
+          console.log('FAILED...', err);
+        }
+      );
   };
 
   return (
