@@ -10,7 +10,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background: white;
+  background: #f5f5f5;
   flex-wrap: wrap;
 }
 
@@ -94,7 +94,7 @@ nav a {
   display: flex;
   justify-content: space-around;
   padding: 40px;
-  background: white;
+  background: #ECBDC4;
   font-size: 0.9em;
   flex-wrap: wrap;
   text-align: center;

@@ -1,0 +1,42 @@
+.projects-container {
+  padding: 60px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 60px;
+}
+
+.project-entry {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.project-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.project-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.project-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.project-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+}
