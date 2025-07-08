@@ -1,0 +1,104 @@
+/* Container fade-in */
+.fade-in {
+  animation: fadeIn 1s ease-in forwards;
+  opacity: 0;
+}
+
+/* Slide-in animations */
+.slide-in-left {
+  animation: slideInLeft 1s ease-out forwards;
+  opacity: 0;
+}
+
+.slide-in-right {
+  animation: slideInRight 1.2s ease-out forwards;
+  opacity: 0;
+}
+
+/* Bubble pop-in */
+.pop-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: popIn 0.8s ease forwards;
+}
+
+.delay-1 {
+  animation-delay: 1.2s;
+}
+
+.delay-2 {
+  animation-delay: 1.5s;
+}
+
+.delay-3 {
+  animation-delay: 1.8s;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Bubbles basic styling (optional if not already done) */
+.bubbles {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.bubble {
+  padding: 15px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.bubble.orange {
+  background-color: #ffa07a;
+}
+
+.bubble.red {
+  background-color: #e57373;
+}
+
+.bubble.blue {
+  background-color: #64b5f6;
+}
+
+.bubble:hover {
+  transform: scale(1.1);
+}

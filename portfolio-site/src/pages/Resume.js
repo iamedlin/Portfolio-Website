@@ -83,6 +83,7 @@ const Resume = () => {
       <ul>
         <li>This is a sample Text</li>
       </ul>
+       <hr style={{ margin: '60px 0' }} />
 
 
       <div style={{ display: 'flex', justifyContent: 'center', marginTop: '40px' }}>

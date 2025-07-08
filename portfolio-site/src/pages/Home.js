@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
+import './Home.css'; // 👈 import your CSS
 
 const Home = () => (
-  <main className="home">
+  <main className="home fade-in">
     <section className="intro">
-      <img src="/profile.jpg" alt="Profile" />
+      <img src="/profile.jpg" alt="Profile" className="slide-in-left" />
 
-      <div>
+      <div className="slide-in-right">
         <h2>Hello</h2>
         <h3>A Bit About Me</h3>
         <p>
@@ -21,9 +22,9 @@ const Home = () => (
     </section>
 
     <section className="bubbles">
-      <Link to="/resume" className="bubble orange">Resume</Link>
-      <Link to="/projects" className="bubble red">Projects</Link>
-      <Link to="/contact" className="bubble blue">Contact</Link>
+      <Link to="/resume" className="bubble orange pop-in delay-1">Resume</Link>
+      <Link to="/projects" className="bubble red pop-in delay-2">Projects</Link>
+      <Link to="/contact" className="bubble blue pop-in delay-3">Contact</Link>
     </section>
   </main>
 );
