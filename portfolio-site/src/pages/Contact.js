@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
+
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -9,8 +11,9 @@ const Contact = () => {
     subject: '',
     message: '',
   });
-  const [preview, setPreview] = useState(null);
+
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const handleChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -35,9 +38,9 @@ const Contact = () => {
         'ICax7EZu6IgwjXmXQ'
       )
       .then(
-        (response) => {
+        () => {
           alert('Message sent successfully!');
-          setPreview({ ...formData });
+          navigate('/preview', { state: formData }); 
           setFormData({
             first: '',
             last: '',
@@ -46,12 +49,11 @@ const Contact = () => {
             message: '',
           });
           setLoading(false);
-          console.log('SUCCESS!', response.status, response.text);
         },
         (err) => {
           alert('Failed to send message. Please try again.');
           setLoading(false);
-          console.log('FAILED...', err);
+          console.error('FAILED...', err);
         }
       );
   };
@@ -59,19 +61,17 @@ const Contact = () => {
   return (
     <main style={{ padding: '40px' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap' }}>
-        {/* Left Column: Contact Info */}
+        {/* Contact Info */}
         <div style={{ flex: '1', minWidth: '300px', marginRight: '40px' }}>
-          <h2 style={{ fontSize: '32px', marginBottom: '10px' }}>Contact</h2>
-          <p style={{ marginBottom: '30px' }}>Looking forward to hearing from you</p>
-
+          <h2>Contact</h2>
+          <p>Looking forward to hearing from you</p>
           <p><strong>Phone</strong></p>
           <p>09772468871</p>
-
           <p style={{ marginTop: '20px' }}><strong>Email</strong></p>
           <p>naseedielyn@gmail.com</p>
         </div>
 
-        {/* Right Column: Contact Form */}
+          {/* Right Column: Contact Form */}
         <form
           onSubmit={handleSubmit}
           style={{ flex: '1', minWidth: '300px' }}
@@ -153,19 +153,6 @@ const Contact = () => {
           </div>
         </form>
       </div>
-
-      {/* Preview Section */}
-      {preview && (
-        <div style={{ marginTop: '40px', background: '#f5f5f5', padding: '24px', borderRadius: '12px', maxWidth: '600px' }}>
-          <h3 style={{ marginBottom: '16px' }}>Preview of Sent Message</h3>
-          <p><strong>First Name:</strong> {preview.first}</p>
-          <p><strong>Last Name:</strong> {preview.last}</p>
-          <p><strong>Email:</strong> {preview.email}</p>
-          <p><strong>Subject:</strong> {preview.subject}</p>
-          <p><strong>Message:</strong></p>
-          <div style={{ whiteSpace: 'pre-wrap', background: '#fff', padding: '12px', borderRadius: '8px', border: '1px solid #ddd' }}>{preview.message}</div>
-        </div>
-      )}
     </main>
   );
 };
