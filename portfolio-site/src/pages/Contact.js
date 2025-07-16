@@ -123,10 +123,10 @@ const Contact = () => {
             <label>Message</label>
             <textarea
               name="message"
-              rows="5"
+              rows="10"
               value={formData.message}
               onChange={handleChange}
-              style={{ width: '100%', padding: '8px', marginTop: '4px' }}
+              style={{ width: '100%', padding: '12px', height: '380px', marginTop: '4px', fontSize: '1.1rem' }}
             />
           </div>
 

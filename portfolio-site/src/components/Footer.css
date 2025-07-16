@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* Pushes footer to the bottom */
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #e6b7bd; /* soft pink */
+  padding: 20px;
+  color: black;
+  text-align: center;
+}
+
+.footer-section h4 {
+  margin: 0 0 5px;
+  font-weight: bold;
+}
+
+.footer-section a {
+  color: blue;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
