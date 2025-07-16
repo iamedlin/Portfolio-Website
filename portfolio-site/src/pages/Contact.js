@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     first: '',
@@ -13,6 +12,7 @@ const Contact = () => {
   });
 
   const [loading, setLoading] = useState(false);
+  const [showPreviewButton, setShowPreviewButton] = useState(false);
   const navigate = useNavigate();
 
   const handleChange = (e) =>
@@ -32,30 +32,27 @@ const Contact = () => {
 
     emailjs
       .send(
-        'service_4xjonh4',
-        'template_zdj8gw4',
+        'service_4xjonh4',         // Replace with your EmailJS service ID
+        'template_zdj8gw4',        // Replace with your template ID
         templateParams,
-        'ICax7EZu6IgwjXmXQ'
+        'ICax7EZu6IgwjXmXQ'        // Replace with your public key
       )
       .then(
         () => {
           alert('Message sent successfully!');
-          navigate('/preview', { state: formData }); 
-          setFormData({
-            first: '',
-            last: '',
-            email: '',
-            subject: '',
-            message: '',
-          });
+          setShowPreviewButton(true);  // Show preview button after success
           setLoading(false);
         },
         (err) => {
           alert('Failed to send message. Please try again.');
-          setLoading(false);
           console.error('FAILED...', err);
+          setLoading(false);
         }
       );
+  };
+
+  const handlePreview = () => {
+    navigate('/preview', { state: formData });
   };
 
   return (
@@ -71,7 +68,7 @@ const Contact = () => {
           <p>naseedielyn@gmail.com</p>
         </div>
 
-          {/* Right Column: Contact Form */}
+        {/* Contact Form */}
         <form
           onSubmit={handleSubmit}
           style={{ flex: '1', minWidth: '300px' }}
@@ -151,6 +148,27 @@ const Contact = () => {
               {loading ? 'Sending...' : 'Submit'}
             </button>
           </div>
+
+          {/* Preview Button (shows after submission) */}
+          {showPreviewButton && (
+            <div style={{ marginTop: '20px', textAlign: 'center' }}>
+              <button
+                type="button"
+                onClick={handlePreview}
+                style={{
+                  backgroundColor: '#D4ECDD',
+                  border: 'none',
+                  padding: '12px 30px',
+                  borderRadius: '30px',
+                  fontWeight: 'bold',
+                  cursor: 'pointer',
+                  minWidth: '120px',
+                }}
+              >
+                Preview
+              </button>
+            </div>
+          )}
         </form>
       </div>
     </main>
