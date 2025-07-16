@@ -1,10 +1,10 @@
-/* Container fade-in */
+
 .fade-in {
   animation: fadeIn 1s ease-in forwards;
   opacity: 0;
 }
 
-/* Slide-in animations */
+
 .slide-in-left {
   animation: slideInLeft 1s ease-out forwards;
   opacity: 0;
@@ -15,23 +15,23 @@
   opacity: 0;
 }
 
-/* Bubble pop-in */
 .pop-in {
   opacity: 0;
   transform: translateY(20px);
   animation: popIn 0.8s ease forwards;
+  animation-fill-mode: both;
 }
 
 .delay-1 {
-  animation-delay: 1.2s;
+  animation-delay: 0.2s;
 }
 
 .delay-2 {
-  animation-delay: 1.5s;
+  animation-delay: 0.5s;
 }
 
 .delay-3 {
-  animation-delay: 1.8s;
+  animation-delay: 0.8s;
 }
 
 /* Animations */
@@ -70,7 +70,7 @@
   }
 }
 
-/* Bubbles basic styling (optional if not already done) */
+
 .bubbles {
   margin-top: 40px;
   display: flex;

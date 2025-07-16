@@ -43,3 +43,28 @@ nav a.active {
   color: white;
   font-weight: bold;
 }
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: pink;
+  border-radius: 50%;
+  margin-right: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot:hover {
+  background-color: hotpink;
+}
+.delay-1 {
+  animation-delay: 1.2s;
+}
+
+.delay-2 {
+  animation-delay: 1.5s;
+}
+
+.delay-3 {
+  animation-delay: 1.8s;
+}

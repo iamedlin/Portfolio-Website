@@ -80,9 +80,54 @@ const Resume = () => {
 
       {/* Skills Section */}
       <h2>Skills &amp; Expertise</h2>
-      <ul>
-        <li>This is a sample Text</li>
-      </ul>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', marginTop: '20px' }}>
+        <div style={{ flex: '1 1 200px' }}> 
+      </div>
+      </div>
+      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(3, 1fr)',
+          gap: '20px',
+          width: '100%',
+          maxWidth: '700px',
+        }}>
+          <div style={{ minWidth: '180px' }}>
+            <ul>
+              <h4>Languages</h4>
+            </ul>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Java</li>
+              <li>C++</li>
+              <li>JavaScript</li>
+              <li>Python</li>
+              <li>PHP</li>
+            </ul>
+          </div>
+          <div style={{ minWidth: '180px' }}>
+            <ul>
+              <h4>Frameworks</h4>
+            </ul>
+            <ul>
+              <li>React</li>
+              <li>Node.js</li>
+            </ul>
+          </div>
+          <div style={{ minWidth: '180px' }}>
+            <ul>
+              <h4>Tools</h4>
+            </ul>
+            <ul>
+              <li>Git</li>
+              <li>VS Code</li>
+              <li>npm</li>
+              <li>MySQL</li>
+            </ul>
+          </div>
+        </div>
+      </div>
        <hr style={{ margin: '60px 0' }} />
 
 

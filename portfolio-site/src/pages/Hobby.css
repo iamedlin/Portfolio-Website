@@ -1,0 +1,54 @@
+.hobby-page {
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+.hobby-page h2 {
+  color: #e91e63;
+}
+
+.hobby-page ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.hobby-page li {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.bubbles {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.pop-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: popIn 0.8s ease forwards;
+}
+
+.photo-link img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Make it circular like bubbles */
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.photo-link:hover img {
+  transform: scale(1.1);
+}
+
+/* Keep your existing animations */
+.pop-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: popIn 0.8s ease forwards;
+  animation-fill-mode: both;
+}
+
+

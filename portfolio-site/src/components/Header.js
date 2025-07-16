@@ -1,10 +1,13 @@
 import { NavLink } from 'react-router-dom';
-import './Header.css'; 
+import './Header.css';
 
 const Header = () => (
   <header className="site-header">
     <h1>
-      <span className="dot"></span> Edielyn G. Nase
+      <NavLink to="/hobby">
+        <span className="dot"></span>
+      </NavLink>
+      Edielyn G. Nase
     </h1>
     <nav>
       <NavLink to="/" end className={({ isActive }) => isActive ? "active" : ""}>Home</NavLink>
@@ -16,3 +19,4 @@ const Header = () => (
 );
 
 export default Header;
+
