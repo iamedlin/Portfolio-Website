@@ -89,7 +89,7 @@
   transition: transform 0.3s ease;
   opacity: 0.5;
   transform: scale(0.7);
-  animation: bubbleLoading 1.2s infinite;
+  animation: bubbleLoading 1.2s forwards;
 }
 
 .delay-1 {
