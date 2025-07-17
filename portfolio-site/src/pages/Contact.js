@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     first: '',
@@ -32,21 +33,21 @@ const Contact = () => {
 
     emailjs
       .send(
-        'service_4xjonh4',         // Replace with your EmailJS service ID
-        'template_zdj8gw4',        // Replace with your template ID
+        'service_4xjonh4',
+        'template_zdj8gw4',
         templateParams,
-        'ICax7EZu6IgwjXmXQ'        // Replace with your public key
+        'ICax7EZu6IgwjXmXQ'
       )
       .then(
         () => {
           alert('Message sent successfully!');
-          setShowPreviewButton(true);  // Show preview button after success
+          setShowPreviewButton(true);
           setLoading(false);
         },
         (err) => {
           alert('Failed to send message. Please try again.');
-          console.error('FAILED...', err);
           setLoading(false);
+          console.error('FAILED...', err);
         }
       );
   };
@@ -68,7 +69,7 @@ const Contact = () => {
           <p>naseedielyn@gmail.com</p>
         </div>
 
-        {/* Contact Form */}
+          {/* Right Column: Contact Form */}
         <form
           onSubmit={handleSubmit}
           style={{ flex: '1', minWidth: '300px' }}
@@ -126,7 +127,7 @@ const Contact = () => {
               rows="10"
               value={formData.message}
               onChange={handleChange}
-              style={{ width: '100%', padding: '12px', height: '380px', marginTop: '4px', fontSize: '1.1rem' }}
+              style={{ width: '100%', padding: '8px', marginTop: '4px', minHeight: '150px', resize: 'vertical' }}
             />
           </div>
 
@@ -148,7 +149,6 @@ const Contact = () => {
               {loading ? 'Sending...' : 'Submit'}
             </button>
           </div>
-
           {/* Preview Button (shows after submission) */}
           {showPreviewButton && (
             <div style={{ marginTop: '20px', textAlign: 'center' }}>

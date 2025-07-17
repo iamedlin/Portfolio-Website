@@ -17,14 +17,15 @@ const Home = () => {
           <h2>Hello</h2>
           <h3>A Bit About Me</h3>
           <p>
-            Hello! My name is <strong>Edielyn G. Nase</strong>, a dedicated and passionate .
-          </p>
-          <p>
-            I studied at <strong>Bulacan State University </strong>, where I earned my degree in <strong>Computer Engineering</strong>. My journey has been enriched by my love for technology and my commitment to continuous learning.
-          </p>
-          <p>
-            I am goal-oriented, eager to learn, and value both creative and technical challenges. Beyond academics, I enjoy simple moments — especially enjoying chicken with someone special or celebrating Christmas, my favorite holiday, as a symbol of hope and survival.
-          </p>
+  Hello! My name is <strong>Edielyn G. Nase</strong>, a dedicated web developer seeking to improve my knowledge, explore new technologies, and continuously grow in the field of web development.
+</p>
+<p>
+  I studied at <strong>Bulacan State University</strong>, where I earned my degree in <strong>Computer Engineering</strong>. My journey has been enriched by my love for technology and my commitment to continuous learning.
+</p>
+<p>
+  My goal is to fully develop my skills as a web developer and eventually create websites that are helpful, accessible, and meaningful to everyone. I am goal-oriented, eager to learn, and value both creative and technical challenges. 
+</p>
+
         </div>
       </section>
 

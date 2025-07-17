@@ -11,7 +11,7 @@ const Footer = () => (
     </div>
     <div>
       <strong>Follow Me</strong><br />
-      <a href="https://www.linkedin.com/in/edielyn-nase-a00840367/">LinkedIn</a> | <a href="https://github.com/iamedlin">Github</a>
+      <a href="https://www.linkedin.com/in/edielyn-galvez-nase-131750375/">LinkedIn</a> | <a href="https://github.com/iamedlin">Github</a>
     </div>
   </footer>
 );
