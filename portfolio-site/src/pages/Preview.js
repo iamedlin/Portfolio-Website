@@ -18,7 +18,18 @@ const Preview = () => {
       <p><strong>Email:</strong> {email}</p>
       <p><strong>Subject:</strong> {subject}</p>
       <p><strong>Message:</strong></p>
-      <div style={{ whiteSpace: 'pre-wrap', background: '#fff', padding: '12px', borderRadius: '8px', border: '1px solid #ddd' }}>{message}</div>
+      <div style={{
+        width: '100%',
+        padding: '8px',
+        marginTop: '4px',
+        minHeight: '150px',
+        resize: 'vertical',
+        whiteSpace: 'pre-wrap',
+        background: '#fff',
+        borderRadius: '8px',
+        border: '1px solid #ddd',
+        boxSizing: 'border-box',
+      }}>{message}</div>
 
       <button
         onClick={() => navigate('/contact')}
