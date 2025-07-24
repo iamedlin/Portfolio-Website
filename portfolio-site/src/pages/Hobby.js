@@ -14,7 +14,7 @@ const Hobby = () => {
       <section className="photo-album">
         {photos.map((src, i) => (
           <div key={i} className="album-photo pop-in delay-1">
-            <img src={src} alt={`Photo ${i + 1}`} />
+            <img src={src} alt={`Litrato ${i + 1}`} />
           </div>
         ))}
       </section>
