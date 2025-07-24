@@ -31,5 +31,5 @@ jobs:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_IAMEDLIN }}
           channelId: live
-          projectId: iamedlinneys
+          projectId: iamedlin
           entryPoint: ./portfolio-site
