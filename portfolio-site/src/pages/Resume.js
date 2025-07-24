@@ -135,7 +135,7 @@ const Resume = () => {
         <div style={{ textAlign: 'center' }}>
           <p>Click below to download my resume:</p>
           <a
-            href="/Nase, Edielyn G. (resume).pdf"
+            href={process.env.PUBLIC_URL + '/Nase, Edielyn G. (resume).pdf'}
             download
             style={{
               display: 'inline-block',
