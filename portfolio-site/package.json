@@ -1,8 +1,8 @@
 {
-  "homepage": "https://iamedlin.github.io/Portfolio-Website",
   "name": "portfolio-site",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://iamedlin.github.io/Portfolio-Website",
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@testing-library/dom": "^10.4.0",
@@ -15,6 +15,9 @@
     "react-router-dom": "^7.6.3",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -41,8 +44,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^6.3.0"
   }
 }
